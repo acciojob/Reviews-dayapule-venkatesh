@@ -49,10 +49,10 @@ export const Review = (prop) => {
 
   const [count, setCount] = useState(0);
   
-
+let a=`author-${count}`
   return (
     <div className="review" >
-      <p className="author" id="author-id">
+      <p className="author" id={a}>
         author:{ele[count].name}
       </p>
       <p className="job">job:{ele[count].job}</p>
