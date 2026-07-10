@@ -44,6 +44,10 @@ export const Review = (prop) => {
   };
   const handelrandom = () => {
     let random = Math.floor(Math.random() * ele.length);
+     while (random === count) {
+    random = Math.floor(Math.random() * ele.length);
+  }
+
     setCount(random);
   };
 
