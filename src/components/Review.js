@@ -37,10 +37,10 @@ export const Review = (prop) => {
   ];
 
   const handelprevious = () => {
-    count > 0 ? setCount(count - 1) : setCount(count);
+    count > 0 ? setCount(count - 1) : setCount(ele.length-1);
   };
   const handelnext = () => {
-    count < ele.length - 1 ? setCount(count + 1) : setCount(count);
+    count < ele.length - 1 ? setCount(count + 1) : setCount(0);
   };
   const handelrandom = () => {
     let random = Math.floor(Math.random() * ele.length);
@@ -51,7 +51,7 @@ export const Review = (prop) => {
 
   return (
     <div className="review" >
-      <p className="author" id={"author-"+count}>
+      <p className="author" id={"author-" + ele[count].id}>
         author:{ele[count].name}
       </p>
       <p className="job">job:{ele[count].job}</p>
